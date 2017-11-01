@@ -1,0 +1,34 @@
+#include <iostream>  
+using namespace std;  
+int main()   
+{  
+    int mouth[13] = {0,31,28,31,30,31,30,31,31,30,31,30,31};  
+    int t = 0;  
+    int year = 2014,m = 11,day = 9;  
+    while(t<=1000)  
+    {  
+        int ps = 0;  
+        if(m == 2 && year%4==0 && year % 400!=0)  
+        {  
+            ps = 1;  
+        }  
+        while(day<=(mouth[m]+ps))  
+        {  
+            day++;  
+            t++;  
+            if(t>=1000)  
+                break;  
+        }  
+        if(t>=1000)  
+            break;  
+        day = 1;  
+        m++;  
+        if(m==13)  
+        {  
+            year++;  
+            m = 1;  
+        }  
+    }  
+    cout<<year<<"  "<<m<<"   "<<day<<endl;  
+    return 0;  
+}  

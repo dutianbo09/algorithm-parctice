@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a,b,c,d,e,f,g,h,i,j,k,l,m;
+	int count=0;
+	for(a=0;a<=4;a++)
+		for(b=0;b<=4;b++)
+			for(c=0;c<=4;c++)
+				for(d=0;d<=4;d++)
+					for(e=0;e<=4;e++)
+						for(f=0;f<=4;f++)
+							for(g=0;g<=4;g++)
+								for(h=0;h<=4;h++)
+									for(i=0;i<=4;i++)
+										for(j=0;j<=4;j++)
+											for(k=0;k<=4;k++)
+												for(l=0;l<=4;l++)
+													for(m=0;m<=4;m++)
+														if(a+b+c+d+e+f+g+h+i+j+k+l+m==13)
+															count++;
+	cout<<count<<endl;
+
+	return 0;
+}

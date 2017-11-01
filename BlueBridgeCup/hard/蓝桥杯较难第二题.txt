@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n;
+	cin>>n;
+	int sum=n;
+	int pin=n;
+	while (pin>=3)
+		{
+			sum=sum+pin/3;
+			pin=pin-pin/3*3+pin/3;
+		}
+	cout<<sum<<endl;
+	return 0;
+}

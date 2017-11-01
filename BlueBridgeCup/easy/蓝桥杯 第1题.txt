@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i,j,k;
+	for (i=1;i<=1000;i++)
+		for (j=i+1;j<=1000;j++)
+			for (k=j+1;k<=1000;k++)
+				if(i*i+j*j+k*k==1000)
+					cout<<"另一组合适的解是"<<i<<"   "<<j<<"   and   "<<k<<endl;
+	return 0;
+}

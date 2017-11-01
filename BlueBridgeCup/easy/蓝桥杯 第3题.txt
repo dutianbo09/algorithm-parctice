@@ -1,0 +1,42 @@
+#include <iostream>  
+using namespace std;   
+bool solve(int a,int b) ;
+int main()   
+{  
+    for(int i=1;;i++)  
+    {  
+        int pingfang = i*i;  
+        int lifang= i*i*i;  
+        if(solve(pingfang,lifang))  
+        {  
+			cout<<i<<endl;  
+            break;  
+        }  
+    }  
+    return 0;  
+}  
+bool solve(int a,int b)  
+{  
+    int meiyiwei[20]={0};  
+    while(a!=0)  
+    {  
+        meiyiwei[a%10]++;  
+        a=a/10;  
+    }  
+    while(b!=0)  
+    {  
+		meiyiwei[b%10]++;  
+        b=b/10;  
+    }  
+    bool check= true;  
+    for(int i=0;i<10;i++)  
+    {  
+        if(meiyiwei[i]==0)  
+        {  
+            check= false;  
+            break;  
+        }  
+    }  
+    return check;  
+}  
+  
